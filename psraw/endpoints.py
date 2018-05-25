@@ -24,19 +24,20 @@ ENDPOINTS = {
             'subreddit': str,
             'author': str
         },
-        'limit': 500,
+        'limit': 1000,
         'return_type': praw.models.Comment,
         'url': '/search/comment/'
     },
     'submission_search': {
         'params': {
             'after': int,
+            'before': int,
             'limit': int,
             'q': str,
             'sort': sort_type,
             'subreddit': str
         },
-        'limit': 250,
+        'limit': 1000,
         'return_type': praw.models.Submission,
         'url': '/search/submission/'
     }
